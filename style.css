@@ -61,4 +61,19 @@ font-size:12px;
 .clear {
 clear:both;
 }
+h2 {
+position:relative;
+overflow:hidden;
+font-size:20px;
+font-weight:normal;
+margin:0 1.5% 0 1.5%;
+}
+h2:after {
+content:'';
+position:absolute;
+width:100%;
+border-top:1px solid #4e4e4e;
+margin-top:.6em;
+margin-left:.4em;
+}
 
