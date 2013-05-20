@@ -62,18 +62,34 @@ font-size:12px;
 clear:both;
 }
 h2 {
-position:relative;
-overflow:hidden;
-font-size:20px;
+text-align:center;
+font-size:18px;
+color:#999;
 font-weight:normal;
-margin:0 1.5% 0 1.5%;
 }
-h2:after {
-content:'';
-position:absolute;
-width:100%;
-border-top:1px solid #4e4e4e;
-margin-top:.6em;
-margin-left:.4em;
+h2 .title {
+text-align:center;
+display:inline-block;
+margin:auto;
+position:relative;
+vertical-align:middle;
+}
+h2 .title:before {
+content:"";
+height:1px;
+width:300px;
+background:#999;
+display:inline-block;
+vertical-align:middle;
+margin-right:10px;
+}
+h2 .title:after {
+content:"";
+height:1px;
+width:300px;
+background:#999;
+display:inline-block;
+vertical-align:middle;
+margin-left:10px;
 }
 
