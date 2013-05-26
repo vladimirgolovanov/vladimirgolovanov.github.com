@@ -1,0 +1,310 @@
+body {
+font-family:sans-serif;
+}
+.clear {
+clear:both;
+height:0px;
+}
+#main {
+width:980px;
+margin:0px auto;
+}
+#rightcol {
+float:right;
+color:#666;
+font-size:12px;
+margin-left:20px;
+width:150px;
+}
+#rightcol .h {
+font-size:16px;
+font-weight:bold;
+padding-bottom:10px;
+margin-bottom:10px;
+border-bottom:#ccc 1px solid;
+}
+#leftcol {
+width:800px;
+float:left;
+}
+h1 {
+font-size:23px;
+font-weight:normal;
+height:27px;
+line-height:27px;
+margin:13px 10px 13px 0;
+}
+.note {
+margin:0 0 10px 20px;
+background:#f6efdd;
+border-radius:2px;
+border:#ccc 1px solid;
+color:#333;
+padding:7px 10px;
+float:right;
+width:330px;
+font-size:12px;
+text-shadow:1px 1px 0px rgba(255,255,255,0.8);
+}
+.blocksel {
+font-size:16px;
+font-weight:bold;
+background:#eee;
+padding:10px 0 0 10px;
+border-color:#bbb;
+border-style:solid;
+border-width:1px 1px 0px 1px;
+}
+.hide {
+height:0px;
+display:none;
+}
+.show {
+height:auto;
+display:block;
+}
+#slclass {
+font-size:16px;
+}
+#slbrand #slclass {
+display:block;
+margin:0 0 5px 0;
+}
+#slbrand {
+background:#eee;
+padding:10px;
+border-color:#bbb;
+border-style:solid;
+border-width:0px 1px 0px 1px;
+}
+#slbrand .itemlarge {
+width:106px;
+height:45px;
+margin:5px 5px 0px 0px;
+overflow:hidden;
+float:left;
+font-size:10px;
+text-align:center;
+cursor:pointer;
+color:#666;
+}
+#slbrand .itemlarge img {
+display:block;
+width:25px;
+height:25px;
+margin:2px auto 1px auto;
+}
+#slbrand .itemlarge:hover {
+background-color:#fff;
+}
+#slbrand .itemlarge:hover span {
+border-bottom:#666 1px solid;
+}
+#slbrand .s {
+background:#ddd;
+}
+#slbrand .s:hover {
+background:#ddd;
+}
+#slmark {
+background:#ddd;
+clear:both;
+border-width:1px;
+border-style:solid;
+border-color:#ccc #fff #fff #ccc;
+border-radius:3px;
+margin:0px 3px;
+}
+#slmark .inside {
+border-width:1px;
+border-style:solid;
+border-color:#fff #ccc #ccc #fff;
+border-radius:3px;
+padding:4px 0;
+}
+#slmark .itemmark {
+width:84px;
+height:15px;
+line-height:15px;
+padding:4px 0px 4px 5px;
+margin-left:5px;
+overflow:hidden;
+float:left;
+font-size:12px;
+text-align:left;
+cursor:pointer;
+color:#666;
+}
+#slmark .itemmark:hover span {
+border-bottom:#666 1px solid;
+}
+#slmark .s2 {
+background:#eee;
+color:#c00;
+}
+#slmode {
+background:#eee;
+clear:both;
+font-size:12px;
+border-width:1px;
+border-style:solid;
+border-color:#ccc #fff #fff #ccc;
+border-radius:3px;
+margin:0px 3px;
+}
+#slmode .inside {
+border-width:1px;
+border-style:solid;
+border-color:#fff #ccc #ccc #fff;
+border-radius:3px;
+padding:4px 0;
+}
+#slmode .h {
+font-weight:bold;
+border-top:#fff 1px solid;
+margin:0 5px 0 5px;
+padding-top:5px;
+}
+#slmode .h:first-child {
+border-top:0;
+}
+#slmode .slmodelist {
+padding-bottom:5px;
+margin:3px 5px 0px 5px;
+border-bottom:#ccc 1px solid;
+}
+#slmode .slmodelist div.el {
+float:left;
+width:175px;
+height:19px;
+}
+#slmode .slmodelist div.el span:hover {
+text-decoration:underline;
+cursor:pointer;
+}
+#slmode .slmodelist:last-child {
+border-bottom:0;
+}
+#slts {
+background:#eee;
+padding:10px 0 0 10px;
+border-color:#bbb;
+border-style:solid;
+border-width:0px 1px 1px 1px;
+}
+#slts .slt {
+width:300px;
+float:left;
+}
+#slts .slt span {
+}
+#selected {
+display:none;
+font-size:16px;
+background:#eee url(l/fiat.png) 7px 7px no-repeat;
+padding:7px 5px 7px 64px;
+height:55px;
+line-height:50px;
+border-color:#bbb;
+border-style:solid;
+border-width:0px 1px 0px 1px;
+}
+#selected #changeselected {
+float:right;
+line-height:50px;
+margin-right:10px;
+}
+#selected #changeselected span {
+color:#666;
+border-bottom:#666 1px dashed;
+cursor:pointer;
+font-size:12px;
+}
+#stars {
+background:#eee;
+margin:10px 0 10px 0;
+padding:10px 10px;
+width:355px;
+float:left;
+min-height:200px;
+border:#bbb 1px solid;
+}
+#stars .h, #gallery .h {
+font-size:16px;
+font-weight:bold;
+}
+#stars .str {
+font-size:14px;
+width:250px;
+margin:10px 0px 10px 0px;
+height:21px;
+line-height:21px;
+}
+#stars .str span {
+float:right;
+width:21px;
+height:21px;
+cursor:pointer;
+background:url(star0.png) top left no-repeat;
+}
+#stars .str span:hover {
+background:url(star1.png) top left no-repeat;
+}
+#gallery {
+background:#eee;
+margin:10px 0 10px 0;
+padding:10px 10px;
+width:355px;
+float:right;
+min-height:200px;
+border:#bbb 1px solid;
+}
+#gallery .pic {
+margin:15px 15px 0px 0px;
+float:left;
+width:70px;
+height:70px;
+background-position:center center;
+background-repeat:no-repeat;
+border:#888 2px solid;
+}
+#gallery #upload {
+background:#666;
+border-width:2px;
+border-style:solid;
+border-color:#999 #333 #333 #999;
+width:180px;
+padding:3px 3px 3px 3px;
+text-align:center;
+margin:10px 0 0 0;
+font-size:12px;
+color:#fff;
+cursor:pointer;
+}
+#textfields {
+background:#eee;
+margin:10px 0 10px 0;
+padding:10px 10px;
+}
+#posttext {
+display:block;
+width:780px;
+height:300px;
+margin:10px 0;
+}
+#postheader {
+display:block;
+width:780px;
+font-size:16px;
+}
+#fsheader {
+margin:0;
+padding:0;
+border:0;
+margin:10px 0;
+}
+#fsheader label {
+font-size:12px;
+color:#333;
+}
+
