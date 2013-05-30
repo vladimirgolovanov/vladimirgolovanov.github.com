@@ -22,100 +22,153 @@ function selectmode() {
 	document.getElementById('selected').style.display ="block";
 	document.getElementById('postheader').value ="Отзыв о Fiat Panda 1100 4x4 (54 Hp)";
 }
+function cancelselect() {
+	document.getElementById('slbrand').style.display ="block";
+	document.getElementById('selected').style.display ="none";
+}
+function star(type, num) {
+	if(num == '1') {
+		document.getElementById('str'+type+'1').className ="strsel";
+		document.getElementById('str'+type+'2').className ="strn";
+		document.getElementById('str'+type+'3').className ="strn";
+		document.getElementById('str'+type+'4').className ="strn";
+		document.getElementById('str'+type+'5').className ="strn";
+	}
+	if(num == '2') {
+		document.getElementById('str'+type+'2').className ="strsel";
+		document.getElementById('str'+type+'1').className ="strsel";
+		document.getElementById('str'+type+'3').className ="strn";
+		document.getElementById('str'+type+'4').className ="strn";
+		document.getElementById('str'+type+'5').className ="strn";
+	}
+	if(num == '3') {
+		document.getElementById('str'+type+'2').className ="strsel";
+		document.getElementById('str'+type+'1').className ="strsel";
+		document.getElementById('str'+type+'3').className ="strsel";
+		document.getElementById('str'+type+'4').className ="strn";
+		document.getElementById('str'+type+'5').className ="strn";
+	}
+	if(num == '4') {
+		document.getElementById('str'+type+'2').className ="strsel";
+		document.getElementById('str'+type+'1').className ="strsel";
+		document.getElementById('str'+type+'3').className ="strsel";
+		document.getElementById('str'+type+'4').className ="strsel";
+		document.getElementById('str'+type+'5').className ="strn";
+	}
+	if(num == '5') {
+		document.getElementById('str'+type+'2').className ="strsel";
+		document.getElementById('str'+type+'1').className ="strsel";
+		document.getElementById('str'+type+'3').className ="strsel";
+		document.getElementById('str'+type+'4').className ="strsel";
+		document.getElementById('str'+type+'5').className ="strsel";
+	}
+}
 </script>
 <div id="main">
 <div id="leftcol">
- <div class="note">Для рассказов об опыте общения с автосалонами, сервисами и прочими организациями существует <a href="">Черный список</a>.</div>
- <h1>Добавить отзыв</h1>
+ <div class="note">Для рассказов об&nbsp;опыте общения с&nbsp;автосалонами, сервисами и&nbsp;прочими организациями существует  <a href="">Черный список</a>.</div>
+ <h1>Добавить отзыв о транспортном средстве</h1>
  <div class="clear"></div>
  <div class="blocksel">Ваше транспортное средство:</div>
  <div id="selected">
-  <div id="changeselected"><span>Изменить</span></div>
+  <div id="changeselected"><span onclick="cancelselect();">Изменить</span></div>
   Fiat Panda 1100 4x4 (54 Hp)
  </div>
  <div id="slbrand">
   <select name="slclass" id="slclass">
    <option>Легковые автомобили</option>
-   <option></option>
-   <option></option>
-   <option></option>
-   <option></option>
-   <option></option>
+   <optgroup label="Мото и другие">
+    <option>Мотоциклы</option>
+    <option>Скутеры</option>
+    <option>Снегоходы</option>
+    <option>Багги</option>
+    <option>Картинг</option>
+    <option>Мотовездеходы</option>
+    <option>Вездеходы-амфибии</option>
+   </optgroup>
+   <optgroup label="Грузовые и коммерческие">
+    <option>Легкие коммерческие</option>
+    <option>Грузовики</option>
+    <option>Седельные тягачи</option>
+    <option>Автобусы</option>
+    <option>Прицепы</option>
+    <option>Съемные кузова и контейнеры</option>
+   </optgroup>
   </select>
-  <div class="itemlarge"><img src="l/audi.png" alt="Audi" /><span>Audi</span></div>
-  <div class="itemlarge"><img src="l/bmw.png" alt="BMW" /><span>BMW</span></div>
-  <div class="itemlarge"><img src="l/cadillac.png" alt="Cadillac" /><span>Cadillac</span></div>
-  <div class="itemlarge"><img src="l/chery.png" alt="Chery" /><span>Chery</span></div>
-  <div class="itemlarge"><img src="l/chevrolet.png" alt="Chevrolet" /><span>Chevrolet</span></div>
-  <div class="itemlarge"><img src="l/chrysler.png" alt="Chrysler" /><span>Chrysler</span></div>
-  <div class="itemlarge"><img src="l/citroen.png" alt="Citroen" /><span>Citroen</span></div>
-  <div class="itemlarge"><img src="l/daewoo.png" alt="Daewoo" /><span>Daewoo</span></div>
-  <div class="itemlarge"><img src="l/dodge.png" alt="Dodge" /><span>Dodge</span></div>
+  <div class="itemlarge" onclick="showfiat();"><img src="l/audi.png" alt="Audi" /><span>Audi</span></div>
+  <div class="itemlarge" onclick="showfiat();"><img src="l/bmw.png" alt="BMW" /><span>BMW</span></div>
+  <div class="itemlarge" onclick="showfiat();"><img src="l/cadillac.png" alt="Cadillac" /><span>Cadillac</span></div>
+  <div class="itemlarge" onclick="showfiat();"><img src="l/chery.png" alt="Chery" /><span>Chery</span></div>
+  <div class="itemlarge" onclick="showfiat();"><img src="l/chevrolet.png" alt="Chevrolet" /><span>Chevrolet</span></div>
+  <div class="itemlarge" onclick="showfiat();"><img src="l/chrysler.png" alt="Chrysler" /><span>Chrysler</span></div>
+  <div class="itemlarge" onclick="showfiat();"><img src="l/citroen.png" alt="Citroen" /><span>Citroen</span></div>
+  <div class="itemlarge" onclick="showfiat();"><img src="l/daewoo.png" alt="Daewoo" /><span>Daewoo</span></div>
+  <div class="itemlarge" onclick="showfiat();"><img src="l/dodge.png" alt="Dodge" /><span>Dodge</span></div>
   <div class="itemlarge" id="ifiat" onclick="showfiat();"><img src="l/fiat.png" alt="Fiat" /><span>Fiat</span></div>
-  <div class="itemlarge"><img src="l/ford.png" alt="Ford" /><span>Ford</span></div>
-  <div class="itemlarge"><img src="l/greatwall.png" alt="Great Wall" /><span>Great Wall</span></div>
-  <div class="itemlarge"><img src="l/honda.png" alt="Honda" /><span>Honda</span></div>
-  <div class="itemlarge"><img src="l/hyundai.png" alt="Hyundai" /><span>Hyundai</span></div>
+  <div class="itemlarge" onclick="showfiat();"><img src="l/ford.png" alt="Ford" /><span>Ford</span></div>
+  <div class="itemlarge" onclick="showfiat();"><img src="l/greatwall.png" alt="Great Wall" /><span>Great Wall</span></div>
+  <div class="itemlarge" onclick="showfiat();"><img src="l/honda.png" alt="Honda" /><span>Honda</span></div>
+  <div class="itemlarge" onclick="showfiat();"><img src="l/hyundai.png" alt="Hyundai" /><span>Hyundai</span></div>
   <div class="hide" id="slmark"><div class="inside">
-   <div class="itemmark"><span>124</span></div>
-   <div class="itemmark">126</div>
-   <div class="itemmark">127</div>
-   <div class="itemmark">128</div>
-   <div class="itemmark">130</div>
-   <div class="itemmark">131</div>
-   <div class="itemmark">132</div>
-   <div class="itemmark">238</div>
-   <div class="itemmark">500</div>
-   <div class="itemmark">600</div>
-   <div class="itemmark">900 T/E</div>
-   <div class="itemmark">Albea</div>
-   <div class="itemmark">Argenta</div>
-   <div class="itemmark">Barchetta</div>
-   <div class="itemmark">Brava</div>
-   <div class="itemmark">Bravo</div>
-   <div class="itemmark">Cinquecento</div>
-   <div class="itemmark">Coupe</div>
-   <div class="itemmark">Croma</div>
-   <div class="itemmark">Doblo</div>
-   <div class="itemmark">Duna</div>
-   <div class="itemmark">Fiorino</div>
-   <div class="itemmark">Idea</div>
-   <div class="itemmark">Linea</div>
-   <div class="itemmark">Marea</div>
-   <div class="itemmark">Multipla</div>
-   <div class="itemmark">New 500</div>
-   <div class="itemmark">Palio</div>
-   <div class="itemmark" id="ipanda" onclick="showpanda();">Panda</div>
-   <div class="itemmark">Punto</div>
-   <div class="itemmark">Qubo</div>
-   <div class="itemmark">Regata</div>
+   <div class="itemmark" onclick="showpanda();"><span>124</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>126</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>127</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>128</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>130</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>131</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>132</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>238</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>500</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>600</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>900 T/E</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Albea</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Argenta</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Barchetta</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Brava</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Bravo</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Cinquecento</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Coupe</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Croma</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Doblo</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Duna</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Fiorino</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Idea</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Linea</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Marea</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Multipla</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>New 500</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Palio</span></div>
+   <div class="itemmark" id="ipanda" onclick="showpanda();"><span>Panda</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Punto</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Qubo</span></div>
+   <div class="itemmark" onclick="showpanda();"><span>Regata</span></div>
    <div class="hide" id="slmode"><div class="inside">
-    <div class="h">Panda (141A) 1981 - н.в.</div>
+    <div class="h">Panda (141A) <span>1981 - н.в.</span></div>
     <div class="slmodelist">
      <div class="el"><span onclick="selectmode();">1100 4x4 (54 Hp)</span></div>
-     <div class="el"><span>1100 Selecta CL (50 Hp)</span></div>
-     <div class="el"><span>1100 Trecking 4x4 CL (50 Hp)</span></div>
-     <div class="el"><span>1000 Fire L (45 Hp)</span></div>
-     <div class="el"><span>750 KAT (34 Hp)</span></div>
-     <div class="el"><span>900 i (40 Hp)</span></div>
-     <div class="el"><span>750 (34 Hp)</span></div>
-     <div class="el"><span>1000 (44 Hp)</span></div>
-     <div class="el"><span>1000 4x4 (50 Hp)</span></div>
-     <div class="el"><span>1300 D (37 Hp)</span></div>
-     <div class="el"><span>1000 4x4 (45 Hp)</span></div>
-     <div class="el"><span>1000 4x4 (44 Hp)</span></div>
-     <div class="el"><span>950 4x4 (48 Hp)</span></div>
-     <div class="el"><span>800 (34 Hp)</span></div>
-     <div class="el"><span>900 (45 Hp)</span></div>
-     <div class="el"><span>1100 Selecta CLX (55 Hp)</span></div>
+     <div class="el"><span onclick="selectmode();">1100 Selecta CL (50 Hp)</span></div>
+     <div class="el"><span onclick="selectmode();">1100 Trecking 4x4 CL (50 Hp)</span></div>
+     <div class="el"><span onclick="selectmode();">1000 Fire L (45 Hp)</span></div>
+     <div class="el"><span onclick="selectmode();">750 KAT (34 Hp)</span></div>
+     <div class="el"><span onclick="selectmode();">900 i (40 Hp)</span></div>
+     <div class="el"><span onclick="selectmode();">750 (34 Hp)</span></div>
+     <div class="el"><span onclick="selectmode();">1000 (44 Hp)</span></div>
+     <div class="el"><span onclick="selectmode();">1000 4x4 (50 Hp)</span></div>
+     <div class="el"><span onclick="selectmode();">1300 D (37 Hp)</span></div>
+     <div class="el"><span onclick="selectmode();">1000 4x4 (45 Hp)</span></div>
+     <div class="el"><span onclick="selectmode();">1000 4x4 (44 Hp)</span></div>
+     <div class="el"><span onclick="selectmode();">950 4x4 (48 Hp)</span></div>
+     <div class="el"><span onclick="selectmode();">800 (34 Hp)</span></div>
+     <div class="el"><span onclick="selectmode();">900 (45 Hp)</span></div>
+     <div class="el"><span onclick="selectmode();">1100 Selecta CLX (55 Hp)</span></div>
      <div class="clear"></div>
     </div>
-    <div class="h">Panda 4x4 2004 - н.в.</div>
+    <div class="h">Panda 4x4 <span>2004 - н.в.</span></div>
     <div class="slmodelist">
      <div class="el"><span>1.2 MPI 4x4 (60 hp)</span></div>
      <div class="clear"></div>
     </div>
-    <div class="h">Panda II (169) 2003 - н.в.</div>
+    <div class="h">Panda II (169) <span>2003 - н.в.</span></div>
     <div class="slmodelist">
      <div class="el"><span>1.1 MPI (54 Hp)</span></div>
      <div class="el"><span>1.2 MPI (60 Hp)</span></div>
@@ -124,7 +177,7 @@ function selectmode() {
      <div class="el"><span>1.3 i 16V Multijet 4X4 (70 Hp)</span></div>
      <div class="clear"></div>
     </div>
-    <div class="h">Panda Van 1986 - н.в.</div>
+    <div class="h">Panda Van <span>1986 - н.в.</span></div>
     <div class="slmodelist">
      <div class="el"><span>1000 (44 Hp)</span></div>
      <div class="el"><span>750 (34 Hp)</span></div>
@@ -132,17 +185,17 @@ function selectmode() {
      <div class="clear"></div>
     </div>
    </div></div>
-   <div class="itemmark">Ritmo</div>
-   <div class="itemmark">Sedici</div>
-   <div class="itemmark">Seicento</div>
-   <div class="itemmark">Siena</div>
-   <div class="itemmark">Stilo</div>
-   <div class="itemmark">Strada</div>
-   <div class="itemmark">Tempra</div>
-   <div class="itemmark">Tipo</div>
-   <div class="itemmark">Ulysse</div>
-   <div class="itemmark">UNO</div>
-   <div class="itemmark">X 1/9</div>
+   <div class="itemmark"><span>Ritmo</span></div>
+   <div class="itemmark"><span>Sedici</span></div>
+   <div class="itemmark"><span>Seicento</span></div>
+   <div class="itemmark"><span>Siena</span></div>
+   <div class="itemmark"><span>Stilo</span></div>
+   <div class="itemmark"><span>Strada</span></div>
+   <div class="itemmark"><span>Tempra</span></div>
+   <div class="itemmark"><span>Tipo</span></div>
+   <div class="itemmark"><span>Ulysse</span></div>
+   <div class="itemmark"><span>UNO</span></div>
+   <div class="itemmark"><span>X 1/9</span></div>
    <div class="clear"></div>
   </div></div>
   <div class="itemlarge"><img src="l/infiniti.png" alt="Infiniti" /><span>Infiniti</span></div>
@@ -170,6 +223,7 @@ function selectmode() {
   <div class="itemlarge"><img src="l/toyota.png" alt="Toyota" /><span>Toyota</span></div>
   <div class="itemlarge"><img src="l/volkswagen.png" alt="Volkswagen" /><span>Volkswagen</span></div>
   <div class="itemlarge"><img src="l/volvo.png" alt="Volvo" /><span>Volvo</span></div>
+  <div class="itemlarge"><div class="moreitems">Все<br>марки</div></div>
   <div class="clear"></div>
  </div>
  <div id="slts">
@@ -200,16 +254,46 @@ function selectmode() {
  </div>
  <div id="stars">
   <div class="h">Ваша оценка</div>
-  <div class="str">Внешний вид:<span></span><span></span><span></span><span></span><span></span></div>
-  <div class="str">Комфорт:<span></span><span></span><span></span><span></span><span></span></div>
-  <div class="str">Безопасность:<span></span><span></span><span></span><span></span><span></span></div>
-  <div class="str">Надежность:<span></span><span></span><span></span><span></span><span></span></div>
-  <div class="str">Ходовые качества:<span></span><span></span><span></span><span></span><span></span></div>
+  <div class="str">Внешний вид:
+<span id="stra5" onclick="star('a', '5')"></span>
+<span id="stra4" onclick="star('a', '4')"></span>
+<span id="stra3" onclick="star('a', '3')"></span>
+<span id="stra2" onclick="star('a', '2')"></span>
+<span id="stra1" onclick="star('a', '1')"></span>
+</div>
+  <div class="str">Комфорт:
+<span id="strb5" onclick="star('b', '5')"></span>
+<span id="strb4" onclick="star('b', '4')"></span>
+<span id="strb3" onclick="star('b', '3')"></span>
+<span id="strb2" onclick="star('b', '2')"></span>
+<span id="strb1" onclick="star('b', '1')"></span>
+</div>
+  <div class="str">Безопасность:
+<span id="strc5" onclick="star('c', '5')"></span>
+<span id="strc4" onclick="star('c', '4')"></span>
+<span id="strc3" onclick="star('c', '3')"></span>
+<span id="strc2" onclick="star('c', '2')"></span>
+<span id="strc1" onclick="star('c', '1')"></span>
+</div>
+  <div class="str">Надежность:
+<span id="strd5" onclick="star('d', '5')"></span>
+<span id="strd4" onclick="star('d', '4')"></span>
+<span id="strd3" onclick="star('d', '3')"></span>
+<span id="strd2" onclick="star('d', '2')"></span>
+<span id="strd1" onclick="star('d', '1')"></span>
+</div>
+  <div class="str">Ходовые качества:
+<span id="stre5" onclick="star('e', '5')"></span>
+<span id="stre4" onclick="star('e', '4')"></span>
+<span id="stre3" onclick="star('e', '3')"></span>
+<span id="stre2" onclick="star('e', '2')"></span>
+<span id="stre1" onclick="star('e', '1')"></span>
+</div>
   <div class="clear"></div>
  </div>
  <div id="gallery">
   <div class="h">Загрузить фотографии</div>
-  <div id="upload">Добавить фотографии</div>
+  <div id="upload"><span>Добавить фотографии</span></div>
   <div class="pic" style="background-image:url(p/01.jpg);"></div>
   <div class="pic" style="background-image:url(p/02.jpg);"></div>
   <div class="pic" style="background-image:url(p/03.jpg);"></div>
@@ -221,16 +305,40 @@ function selectmode() {
    <input type="text" id="postheader" />
   </fieldset>
   <textarea id="posttext" placeholder="Текст отзыва"></textarea>
+  <fieldset class="proscons">
+   <label>Плюсы:</label>
+   <textarea id="prostext"></textarea>
+  </fieldset>
+  <fieldset class="proscons">
+   <label>Минусы:</label>
+   <textarea id="constext"></textarea>
+  </fieldset>
+  <div class="prosconsex">
+   Например:<br />
+   &ndash;&nbsp;Очень необременительный во&nbsp;всех отношениях<br />
+   &ndash;&nbsp;Хорошо заводится<br />
+   &ndash;&nbsp;Долго прогревается салон<br />
+  </div>
+  <div class="clear"></div>
+ </div>
+ <div class="submitending">
+ <input type="button" value="Сохранить" /> или <a href="">отменить</a>
  </div>
 </div>
 <div id="rightcol">
 <div class="h">Комментарии</div>
-<p>Большинство пользователей будет вводить легковые авто, поэтом попробуем выбрать эту рубрику сразу.</p>
+<p>Большинство пользователей будет вводить легковые авто, поэтому выбираем эту рубрику сразу.</p>
 <p>Выводим основные бренды в список с лого, остальные прячем за кнопку "все марки".</p>
-<p>Поля select - зло. Они напоминают заполнение форм в 1С, а мы хотим, чтобы пользователь скорее чувствовал себя играющим в компьютерную игру.</p>
+<p>Поля select напоминают заполнение форм в 1С, а мы хотим, чтобы пользователь скорее чувствовал себя играющим в компьютерную игру. Избавляемся от половины.</p>
 <p>После выбора марки и модели автомобиля - очень редко будет возврат обратно, поэтому сворачиваем весь список, показывает только выбранную модель.</p>
+<hr>
 <p>Звездочки и фото - стоят между выбором модели и написанием текста. Они готовят пользователя к написанию отзыва, помогают вспомнить все стороны автомобиля.</p>
-<p>В этой форме должно присутствовать автосохранение.</p>
+<p>При загрузке фотографий не показывать условия. Если фотография не JPG, больше 8 мб или слишком маленькая - сообщить об этом.</p>
+<p>Порядок фотографий - drag'n'drop. При клике - lightbox с крупной версией и уведалением.</p>
+<hr>
+<p>Кстати, в этой форме должно присутствовать автосохранение. Неприятно потерять 5 абзацев только что написанного обзора.</p>
+<hr>
+<p>Заголовок отзыва - очень сложная вещь (примерно как тема письма). Обычно пользователь не знает, что вписать туда. Поэтому мы помогаем ему (например, при выборе модели авто). А если ему не понравится - напишет что-то свое. Главное, чтобы сразу приступил к написанию текста.</p>
 </div>
 <div class="clear"></div>
 </div>
