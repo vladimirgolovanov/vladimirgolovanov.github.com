@@ -1,0 +1,107 @@
+body {
+font-family:'Roboto Condensed',sans-serif;
+margin:0;
+padding:0;
+}
+#header {
+padding:15px 0 20px 0;
+background:#eee;
+border-bottom:#ddd 3px solid;
+}
+h1 {
+font-weight:normal;
+font-size:24px;
+margin:0 auto;
+width:500px;
+}
+#main {
+width:500px;
+margin:30px auto;
+}
+#brfline, #dnrline, #sprline {
+height:40px;
+float:left;
+}
+#brfline {
+border-right:#ed8836 1px solid;
+}
+#dnrline {
+border-right:#81bf58 1px solid;
+}
+#sprline {
+border-right:#c66cff 1px solid;
+}
+.line {
+background:#ddd;
+height:30px;
+}
+.mrn, .awk, .brf, .dnr, .spr, .slp {
+float:left;
+height:30px;
+background:#eee;
+border-left:#999 1px solid;
+}
+.mrn {
+border:0;
+background:#ddd;
+}
+.mrn span {
+display:block;
+line-height:29px;
+padding-left:7px;
+font-size:12px;
+color:#999;
+}
+.awk {
+}
+.brf {
+border-left:#ed8836 3px solid;
+}
+.dnr {
+border-left:#81bf58 3px solid;
+}
+.spr {
+border-left:#c66cff 3px solid;
+}
+.slp {
+background:#ddd;
+}
+.clear {
+clear:both;
+height:5px;
+}
+.clearzero {
+clear:both;
+height:0px;
+}
+#brficon, #dnricon, #spricon {
+width:100px;
+height:100px;
+float:left;
+}
+#brficon span, #dnricon span, #spricon span {
+display:block;
+height:16px;
+line-height:15px;
+margin:79px 15px 5px 15px;
+border-radius:2px;
+background:rgba(255,255,255,0.3);
+color:#000;
+text-shadow:1px 1px 0 rgba(255,255,255,0.6);
+text-align:center;
+font-size:11px;
+text-transform:uppercase;
+}
+#brficon {
+background:#ed8836 url(brf.png) top left no-repeat;
+margin:0 0 0 115px;
+}
+#dnricon {
+background:#81bf58 url(dnr.png) top left no-repeat;
+margin:0 0 0 25px;
+}
+#spricon {
+background:#c66cff url(spr.png) top left no-repeat;
+margin:0 0 0 15px;
+}
+
