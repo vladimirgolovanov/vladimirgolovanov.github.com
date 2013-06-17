@@ -81,12 +81,14 @@ text-shadow:1px 1px 0px rgba(0,0,0,0.4);
 background:rgba(255,255,255,0.1);
 }
 #mainleft {
-width:30%;
+/*width:30%;*/
 float:left;
+width:318px;
 }
 #mainright {
-width:70%;
-float:right;
+/*width:70%;*/
+margin-left:320px;
+/*float:right;*/
 }
 .sidebar {
 border:#999 1px solid;
